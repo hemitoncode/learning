@@ -30,3 +30,4 @@ user_input = input("Enter: ")
 
 while (user_input != "exit"):
     agent.invoke({"messages": [HumanMessage(content=user_input)]})
+    user_input = input("Enter: ")
