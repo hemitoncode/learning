@@ -22,6 +22,8 @@ def process(state: AgentState) -> AgentState:
 
 graph = StateGraph(AgentState)
 graph.add_node("process", process)
+
+
 graph.add_edge(START, "process")
 graph.add_edge("process", END)
 agent = graph.compile()
