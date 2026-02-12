@@ -9,7 +9,10 @@ load_dotenv()
 class AgentState(TypedDict):
     messages: List[HumanMessage]
 
-llm = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatOpenAI(
+    base_url="https://models.github.ai/inference",
+    model="gpt-4o-mini"
+)
 
 
 def process(state: AgentState) -> AgentState:
